@@ -1,0 +1,37 @@
+
+PLAY [Configure OPS445 CentOS VM] **********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [vmlab]
+
+TASK [Ensure Apache is the latest version] *************************************
+ok: [vmlab]
+
+TASK [Ensure epel-release is installed] ****************************************
+ok: [vmlab]
+
+TASK [Remove the 'tree' package] ***********************************************
+ok: [vmlab]
+
+TASK [Set hostname to Seneca ID] ***********************************************
+changed: [vmlab]
+
+TASK [Create user with Seneca ID] **********************************************
+changed: [vmlab]
+
+TASK [Allow SSH key-based login for new user] **********************************
+changed: [vmlab]
+
+TASK [Create lab directories under ~/ops445] ***********************************
+changed: [vmlab] => (item=1)
+changed: [vmlab] => (item=2)
+changed: [vmlab] => (item=3)
+changed: [vmlab] => (item=4)
+changed: [vmlab] => (item=5)
+changed: [vmlab] => (item=6)
+changed: [vmlab] => (item=7)
+changed: [vmlab] => (item=8)
+
+PLAY RECAP *********************************************************************
+vmlab                      : ok=8    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
